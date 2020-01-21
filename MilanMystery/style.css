@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+/* HOME PRIMA FASCIA */
+#home{
+    background-image: url(img/home_mobile.jpg); 
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+#home a{
+    color: #ffffff;
+    font-size: 2rem;
+    padding-bottom: 40px;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    padding: 30px ;
+}
+nav li{
+    display: inline-block; 
+    list-style: none; 
+    text-transform: capitalize;
+    justify-content: space-between;
+    color: #ffffff;
+}
+label{
+    color: #ffffff;
+}
+.menù{
+    flex-grow: 2;
+}
+.search{
+    flex-grow: 1;
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 100px 0;
+}
+/* FINE HOME PRIMA FASCIA */
+
+/* INTRODUZIONE */
+.intro{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.img_intro{
+    display: none;
+}
+.intro h2{
+    padding-top: 30px;
+}
+.text{
+    text-align: justify;
+    padding: 20px;
+}
+.btn_scopri{
+    background-color: #d1d1d1;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+}
+.btn_scopri:hover {
+    background-color: #4e4e4e;
+    border: 1px solid #4e4e4e;
+}
+/* FINE INTRODUZIONE */
+
+/* ARTICOLI */
+article{
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.title_article{
+    width: 100%;
+    height: auto; 
+    padding: 100px 0; 
+}
+#segreti{
+    background-image: url(img/segreti_mobile.jpg);
+    background-size: cover;
+}
+.title_article p{
+    padding: 1rem;
+}
+.title_article h3{
+    padding: 20px;
+    font-size: 2rem;
+}
+.btn_leggi{
+    border: 2.5px solid #ffffff;
+    color: #fff;
+    background: none;
+    padding: 10px;
+    font-size: 1rem;
+    transition: 0.8s;
+}
+#fantasma_duomo{
+    background-image: url(img/fantasma_duomo.jpg);
+    background-size: cover;
+}
+#Palazzo_marino{
+    background-image: url(img/Palazzo_marino.jpg);
+    background-size: cover;
+}
+#Re_magi{
+    background-image: url(img/Re_magi.jpg);
+    background-size: cover;
+}
+#luoghi_spaventosi{
+    background-image: url(img/luoghi_spaventosi.jpg);
+    background-size: cover;
+}
+/* FINE ARTICOLI */
+
+/* REGISTRAZIONE */
+.register{
+    padding: 20px;
+}
+.register h2{
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 1rem;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+} 
+button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+}  
+button:hover {
+    opacity: 0.8;
+}
+  
+#prevBtn {
+    background-color: #bbbbbb;
+}
+  
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+  
+.step.active {
+    opacity: 1;
+}
+  
+.step.finish {
+    background-color: #4CAF50;
+}
+/* FINE REGISTRAZIONE */
+
+/* CALL TO ACTION */
+.call_to_action{
+    background-image: url(img/scrivi_storia.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    height: 100%;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+}
+.call_to_action h2{
+    padding-bottom: 20px;
+}
+.call_to_action p{
+    padding-bottom: 20px;
+}
+/* FINE CALL TO ACTION */
+
+/* FOOTER */
+footer{
+    background-color: rgb(58, 56, 56);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+}
+footer h2{
+    padding: 20px 0;
+    color: grey;
+}
+footer h3{
+    padding-top: 20px;
+}
+footer a{
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+footer li{
+    padding: 10px 0;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+.social a{
+    font-size: 2rem;
+    padding: 0 10px;
+}
+/* media query PC */
+@media(min-width: 750px){
+    #home{
+        background-image: url(img/home.jpg); 
+        background-size: cover;
+    }
+    nav{
+        padding-top: 80px;
+    }
+    nav ul li{
+        padding: 0 40px;
+    }
+    .menù{
+        flex-grow: 2;        
+    }
+    .search{
+        flex-grow: 2;
+    }
+    h1{
+        font-size: 3rem;
+        padding: 180px 0;
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+    }
+/* INTRODUZIONE */
+    .intro {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    .img_intro{
+        display: block;
+        background-size: cover;
+        padding: 40px 20px;
+    }
+    .img_intro img{
+        box-shadow: 15px 15px 5px #726f6f ;
+    }
+/* FINE INTRODUZIONE */
+
+/* ARTICOLI */
+}
