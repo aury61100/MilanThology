@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="Fontawesome/css/all.min.css">
     <link rel="stylesheet" href="animate.min.css">
     <title>MilanThology - La Milano che nessuno racconta</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -117,72 +117,6 @@
         <a href="#"><button class="btn_scopri">Scrivi qui</button></a>
     </div>
     <!-- FINE CALL TO ACTION -->
-    <!-- SLIDER -->
-    <h2>Articoli più letti questo mese</h2>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-          <article>
-            <div class="title_article templari">
-                <p>Leggenda</p>
-                <h3>I Templari a Milano</h3>
-                <a href="#"><button class="btn_leggi">Leggi Articolo</button></a>
-            </div>
-        </article> 
-        </div>
-        
-        <div class="mySlides fade">
-          <article>
-            <div class="title_article Palazzo_marino">
-                <p>Leggenda</p>
-                <h3>La sciagura di Palazzo Marino</h3>
-                <a href="#"><button class="btn_leggi">Leggi Articolo</button></a>
-            </div>
-        </article> 
-        </div>
-        
-        <div class="mySlides fade">
-          <article>
-            <div class="title_article Re_magi">
-                <p>Leggenda</p>
-                <h3>Re Magi nella Basilica di Sant’Eustorgio</h3>
-                <a href="#"><button class="btn_leggi">Leggi Articolo</button></a>
-            </div>
-        </article> 
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>        
-    </div>
-        <br>
-        <br> 
-        <br>
-        <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-        </script>
     <!-- FOOTER -->
     <footer>
         <div class="box_footer">
