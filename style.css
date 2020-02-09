@@ -26,29 +26,188 @@ header a{
     background-image: url(img/home_mobile.jpg); 
     background-size: cover;
 }
-nav{
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    justify-content: space-around;
-    padding: 20px;
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
 }
-nav li{
-    display: inline-block; 
-    list-style: none; 
-    text-transform: capitalize;
-    color: #ffffff;
-    font-size: 1.3rem;
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  -webkit-transition: color 0.3s ease;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  -webkit-transform-origin: 4px 0px;
+  
+          transform-origin: 4px 0px;
+  
+  -webkit-transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease,
+              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  
+  transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease,
+              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease,
+              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menuToggle span:first-child
+{
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  -webkit-transform-origin: 0% 0%;
+  
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  
+  transition: -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  -webkit-transform: none;
+          transform: none;
+}
+.menù-pc{
+    display: none;
 }
 .logo img{
-    width: 100%;
+    width: 30%;
     height: auto;
-    flex-grow: 1;
-}
-.menù{
-    flex-grow: 3;
-    text-align: right;
-    padding-top: 40px;
+    margin-left: 170px;
 }
 h1{
     font-size: 2.5rem;
@@ -261,24 +420,17 @@ hr{
         background-size: cover;
     }
     nav{
-        padding-top: 80px;
-        width: 80%;
-    }
-    nav ul li{
-        padding: 0 40px;
-    }
-    nav a{
-        font-size: 0.4rem;
-    }
-    nav li:hover{
-        transition: 0.8s;
-        color: #000000;
+        display: flex;
+        flex-direction: row;
     }
     .logo img{
         width: 20%;
+        flex-grow: 1;
+        padding-top: 50px;
+        margin-left: 220%;
     }
-    .menù{
-        flex-grow: 2;        
+    .menù li{
+        font-size: 1rem;
     }
     h1{
         font-size: 3rem;
@@ -312,8 +464,8 @@ hr{
         box-shadow: 15px 15px 5px #726f6f ;
     }
     .btn_scopri{
-        border: 2px solid #c0bebe;
-        color: #c0bebe;
+        border: 2px solid #000000;
+        color: #000000;
         background: none;
         padding: 10px 20px;
         font-size: 1rem;
@@ -321,6 +473,8 @@ hr{
     }
     .btn_scopri:hover {
         background-color: #000000;
+        border: 2px solid #000000;
+        border-radius: 5px;
         color: #fff;
     }
     /* FINE INTRODUZIONE */
@@ -338,6 +492,7 @@ hr{
     }
     .btn_leggi:hover {
         background-color: #f8f8f8;
+        border-radius: 5px;
         color: #000000;
     }
     .call_to_action{
@@ -479,6 +634,10 @@ hr{
     background-image: url(img/fantasma_scala.jpg);
     background-size: cover;
 }
+.galleria{
+    background-image: url(img/Galleria.png);
+    background-size: cover;
+}
 @media(min-width: 750px){
     .articoli_due{
         display: flex;
@@ -546,7 +705,7 @@ hr{
 
 #pagina .intermedio{
     height:300px;
-    padding:10px 60px 20px
+    padding:10px 30px;
 }
 #pagina .intro {
     height: auto;
@@ -566,15 +725,24 @@ hr{
 #pagina p{
     text-align: justify;
 }
-/* #pagina .call_to_action{
-    padding: 100px 250px;
-} */
+.video{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+}
+iframe{
+    height: 400px;
+}
 
 @media(min-width: 750px){
 .paragrafo{
     display:flex;
     flex-direction: row;
     width:50%;
+}
+iframe{
+    width: 60%;
 }
 .giornale{
     width:50%;
@@ -590,12 +758,11 @@ hr{
     padding: 0px 70px;
 }
 #pagina .intro{
-    text-align: justify;
     padding-top:40px;
 }
 
-}
 
+}
 /* 404 */
 #error-page ::selection {
     background: #CDD4DE;
@@ -690,3 +857,170 @@ hr{
     transform: scale(1.1);
     overflow: hidden;
   }
+
+/* ISCRIVITI */
+#iscrizione nav {
+     margin-bottom: 30px;
+}
+#iscrizione{
+    background-image: url(img/iscriviti.jpg);
+    background-size: cover;	
+}
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-wrap{
+    font:600 16px/18px 'Montserrat',sans-serif;
+    margin:0;
+	color:#5d72e9;
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:670px;
+	position:relative;
+	background:url(img/iscrizione.jpg) no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+    background:rgba(40,57,101,.9);
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	-webkit-transform:rotateY(180deg);
+	        transform:rotateY(180deg);
+	-webkit-backface-visibility:hidden;
+	        backface-visibility:hidden;
+	-webkit-transition:all .4s linear;
+	transition:all .4s linear;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+	display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
+}
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+.login-form{
+	min-height:345px;
+	position:relative;
+	-webkit-perspective:1000px;
+	        perspective:1000px;
+	-webkit-transform-style:preserve-3d;
+	        transform-style:preserve-3d;
+}
+.login-form .group{
+	margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group input[data-type="password"]{
+	-webkit-text-security:circle;
+}
+.login-form .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+.login-form .group .button{
+	background:#1161ee;
+}
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	-webkit-transition:all .2s ease-in-out 0s;
+	transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	-webkit-transform:scale(0) rotate(0);
+	        transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	-webkit-transform:scale(0) rotate(0);
+	        transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-form .group .check:checked + label .icon:before{
+	-webkit-transform:scale(1) rotate(45deg);
+	        transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+	-webkit-transform:scale(1) rotate(-45deg);
+	        transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+	-webkit-transform:rotate(0);
+	        transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+	-webkit-transform:rotate(0);
+	        transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+}

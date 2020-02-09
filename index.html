@@ -11,22 +11,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- github -->
     <!-- HOME PRIMA FASCIA -->
     <header id="home">
-
-        <nav>
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <a href="index.html"><li>Home</li></a>
+                <a href="leggende.html"><li>Leggende</li></a>
+                <a href="miti.html"><li>Miti</li></a>
+                <a href="segreti.html"><li>Segreti</li></a>
+                <a href="iscrizione.html"><li>Iscriviti</li></a>
+              </ul>
+            </div>
             <div class="logo">
                 <a href="index.html"><img src="img/logo.png" alt="MilanThology"></a>
             </div>
-            <ul class="menù">
-                <a href="leggende.html"><li>Leggende</li></a>
-                <a href="miti.html"><li>Miti</li></a>
-                <a href="segreti.html"><li>Storia</li></a>
-                <a href="segreti.html"><li>Segreti</li></a>
-            </ul>
         </nav>
-        <h1>La Milano che nessuno racconta</h1>
+        <h1> La Milano che nessuno racconta</h1>
         <a href="#main" class="fas fa-angle-double-down animated infinite fadeInDown slower"></a>
     </header>  
     <!-- FINE HOME PRIMA FASCIA -->
@@ -40,8 +45,9 @@
             </div>
             <div class="intro" >
                 <h2>La città che tutti conoscono</h2>
-                <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis cum quasi debitis repellendus deleniti aliquam eligendi eaque possimus quis facilis dolore magnam hic iste eius, sapiente, fuga, exercitationem deserunt magni modi cumque voluptatem. In cum nulla iste nobis officia sunt.</p>
-                <a href="Introduzione.html"><button class="btn_scopri">Scopri la vera Milano</button></a>
+                <p class="text">Amate i <b> viaggi</b> ? Siete <b>curiosi</b> ? Le <b>storie inquietanti</b> vi appassionano? Perfetto, siete nel posto giusto!
+                    <b>MilanThology</b> è un blog. Dentro, c'è la <b>Milano</b> che nessuno racconta. Storie, leggende e curiosità. Dame velate, fantasmi e segreti. Suggestioni horror e misteriose, per scoprire una delle città più conosciute al mondo, con <b>occhi diversi</b>. Vi promettiamo che resterete incollati allo schermo. </p>
+                <a href="segreti.html"><button class="btn_scopri">Scopri la vera Milano</button></a>
             </div>
         </main> 
     <!-- FINE INTRODUZIONE -->
@@ -113,8 +119,10 @@
    <!-- CALL TO ACTION -->
     <div class="call_to_action">
         <h2>Hai una storia interessante?</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quisquam itaque voluptatibus ducimus repudiandae! Sit odio quas quos reprehenderit possimus!</p>
-        <a href="#"><button class="btn_scopri">Scrivi qui</button></a>
+        <p>Iscriviti alla nostra newsletter e potrai inviarci feedback e suggerimenti per migliorare il nostro Blog.
+        Se hai una storia che nessuno conosce e vuoi farla sapere a tutti, iscrivendoti potrai inviarcela e noi saremo lieti di pubblicarla.
+        </p>
+        <a href="iscrizione.html"><button class="btn_scopri">Scrivi qui</button></a>
     </div>
     <!-- FINE CALL TO ACTION -->
     <!-- FOOTER -->
