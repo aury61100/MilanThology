@@ -4,104 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="Fontawesome/css/all.min.css">
     <link rel="stylesheet" href="animate.min.css">
     <title>MilanThology - La Milano che nessuno racconta</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- github -->
-    <!-- HOME PRIMA FASCIA -->
-    <header id="iscriviti">
-        <nav>
+<body id="iscrizione">
+    <header>
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <a href="index.html"><li>Home</li></a>
+                <a href="leggende.html"><li>Leggende</li></a>
+                <a href="miti.html"><li>Miti</li></a>
+				<a href="segreti.htmlx"><li>Segreti</li></a>
+				<a href="iscrizione.html"><li>Iscriviti</li></a>
+              </ul>
+            </div>
             <div class="logo">
                 <a href="index.html"><img src="img/logo.png" alt="MilanThology"></a>
             </div>
         </nav>
-        <h1>ISRIVITI E RESTA AGGIORNATO</h1>
-        <a href="#main" class="fas fa-angle-double-down animated infinite fadeInDown slower"></a>
-    </header>  
-    <!-- FINE HOME PRIMA FASCIA -->
-    <div class="box_page">
-        <div class="fascia_articoli">
-            <article>
-                <div class="title_article options">
-                    <i class="fas fa-user-edit icone"></i>
-                    <h3>Registrati</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, obcaecati.</p>
-                    <a href="#"><button class="btn">REGISTRATI</button></a>
-                </div>
-            </article> 
-            <article>
-                <div class="title_article options">
-                    <i class="fas fa-feather icone"></i>
-                    <h3>Scrivi la tua storia</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, obcaecati.</p>
-                    <a href="#"><button class="btn">SCRIVI</button></a>
-                </div>
-            </article> 
-            <article>
-                <div class="title_article options">
-                    <i class="fas fa-user-edit icone"></i>
-                    <h3>Registrati</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, obcaecati.</p>
-                    <a href="#"><button class="btn">REGISTRATI</button></a>
-                </div>
-            </article>        
-        </div>
-    </div>
-    <!-- FOOTER -->
-    <footer>
-        <div class="box_footer">
-            <div class="footer_container">
-                <div class="colonne">
-                    <div class="testo_footer">
-                        <h3>ARTICOLI SCRITTI DA</h3>
-                        <li>Aurora Carrà</li>
-                        <li>Luca Aggio</li>
-                    </div>
-                    <div class="testo_footer">
-                        <h3>SITO REALIZZATO DA</h3>
-                        <li>Aurora Carrà</li>
-                        <li>Luca Aggio</li>
-                    </div>
-                    <div class="testo_footer">
-                        <h3>GRAFICA REALIZZATA DA</h3>
-                        <li>Aurora Carrà</li>
-                        <li>Luca Aggio</li>
-                    </div>
-                </div>
-            </div>    
-            <div class="footer_container">
-                <div class="newsletter">
-                    <h3> ISCRIVITI ALLA NOSTRA NEWSLETTER </h3> 
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, officia molestiae reiciendis voluptatibus excepturi minus ab rem rerum fuga deleniti.</p> 
-                    <form class="example" action="/action_page.php">
-                        <input type="text" placeholder="Your Email" name="search">
-                        <button type="submit">ISCRIVITI</i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="box_footer">
-            <div class="footer_container">
-                <h2>MilanThology</h2>
-            </div>
-            <div class="footer_container">
-                <div class="social">
-                    <a href="facebbok.com"><i class="fab fa-facebook-square"></i></a>
-                    <a href="youtube.com"><i class="fab fa-youtube"></i></a>
-                    <a href="facebbok-com"><i class="fab fa-instagram"></i></a>
-                    <a href="facebbok-com"><i class="far fa-envelope"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <section class="text_footer">
-        Il sito è stato creato a scopo didattico dagli allievi del corso accademico primo anno della Scuola Mohole di Web e Digital Media. I diritti dei contenuti e dei marchi citati appartengono ai loro legittimi proprietari.
-    </section>
-    <!-- FINE FOOTER -->
+    </header>
+    <!-- partial:index.partial.html -->
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">Username</label>
+					<input id="user" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Sign In">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#forgot">Forgot Password?</a>
+				</div>
+			</div>
+			<div class="sign-up-htm">
+				<div class="group">
+					<label for="user" class="label">Username</label>
+					<input id="user" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Repeat Password</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Email Address</label>
+					<input id="pass" type="text" class="input">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Sign Up">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<label for="tab-1">Already Member?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- partial -->
 </body>
 </html>
