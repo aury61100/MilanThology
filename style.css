@@ -1000,3 +1000,25 @@ a{color:inherit;text-decoration:none}
     background-image: url(img/naviglio.jpg);
     background-size: cover;
 }
+#pag-segreti{
+    background-image: url(img/pag-segreti.png);
+    background-size: cover;
+}
+.città-sotterranea{
+    background-image: url(img/città-sotterranea.jpg);
+}
+.Borromeo{
+    background-image: url(img/borromeo.jpg);
+}
+.corsia{
+    background-image: url(img/corsia.jpg);
+    background-size: cover;
+}
+.chiese{
+    background-image: url(img//chiese.png);
+    height: 100%;
+}
+.monaca-monza{
+    background-image: url(img/monaca-monza.jpg);
+    background-size: cover;
+}
