@@ -1062,7 +1062,11 @@ header>nav{
         list-style: none; 
         text-transform: capitalize;
         color: #ffffff;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+    nav li:hover{
+        color: #d1d1dd;
+        transition: 0.5s;
     }
     #iscrizione li{
         color: #232323;
