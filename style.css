@@ -545,7 +545,7 @@ hr{
     .footer_container{
         display: flex;
         flex-direction: row;
-       justify-content: center;
+        justify-content: center;
         width: 50%;
         color: #fff;
     }
@@ -1057,7 +1057,7 @@ header>nav{
     .menu li{
      padding:0px 30px;
     }
-    li{
+    nav li{
         display: inline-block; 
         list-style: none; 
         text-transform: capitalize;
